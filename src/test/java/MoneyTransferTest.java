@@ -54,7 +54,7 @@ public class MoneyTransferTest {
         var amount = DataHelper.generateInvalidAmount(secondCardBalance);
         var transferPage = dashboardPage.selectCardToTransfer(firstCardInfo);
         transferPage.makeTransfer(String.valueOf(amount), secondCardInfo);
-        transferPage.findErrorMessage("Ошибка! ");
+        transferPage.findErrorMessage("Ошибка! Попытка перевода суммы, превышающей остаток на карте");
 
     }
 }
